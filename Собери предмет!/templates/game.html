@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block main %}
+<div class="form1">
+  <form action="/check" method="post">
+      <div class="head">
+          <input type="radio" name="answer" value="{{ answer }}" id="a{{ answer }}" checked style="display: none;">
+          <div class="up">
+            <h1><label for="a{{ answer }}"><img src="/static/img/{{ picture }}" alt="">Как собрать {{ name }}?</label> </h1><br>
+          </div>
+      </div>
+      <hr>
+      <div class="items">
+          {% for item in order %}
+          <div class="card light" style="width: 9rem;">
+              <img src="/static/img/{{ items[item].pic }}" class="card-img-top" alt="Не загрузилась(" style="width: 9rem;">
+              <div class="card-body1">
+                <div class="card-body">
+                  <p class="card-text"><input type="checkbox" style="display: none;" name="{{ item }}" id="item{{ item }}" value=""><label for="item{{ item }}">{{items[item].name }} </label></p>
+                </div>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+      <input type="radio" name="version" value="{{ version }}" id="a{{ version }}" checked style="display: none;">
+      <button type="submit">send</button>
+  </form>
+</div>
+{% endblock %}
