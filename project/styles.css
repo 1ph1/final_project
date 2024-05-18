@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+.mainpage_header {
+    display: flex;
+}
+
+.mainpage_header_text {
+    margin-top: 45px;
+}
+
+.A {
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.game_modes {
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.make_items {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.make_items_difficulty_choice {
+    display: none;
+}
